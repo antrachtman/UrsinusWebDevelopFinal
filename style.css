@@ -1,0 +1,567 @@
+@font-face {
+  font-family: 'ARDESTINE_CUST';
+  src: url('ARDESTINE.woff') format('woff'), /* Chrome 6+, Firefox 3.6+,
+IE 9+, Safari 5.1+ */
+       url('ARDESTINE.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5,
+Opera 10+, Safari 3‹5 */
+}
+input[type="button"]
+{
+    color:white;
+	background-color: black;
+}
+
+input[type="submit"]
+{
+    color:white;
+	background-color: red;
+}
+
+input:hover[type="submit"]
+{
+    color:red;
+	background-color: white;
+}
+
+input:hover[type="button"]
+{
+    color:black;
+	background-color: white;
+}
+
+canvas 	{
+		background-color: black;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	
+#myCanvas 	{
+		position: fixed;
+		background-color: black;
+		left: 40px;
+		top: 80px;
+		display: block;
+	}
+	
+#myCanvas2	{
+		position: fixed;
+		background-color: black;
+		left: 660px;
+		top: 80px;
+		display: block;
+	}
+	
+#charCanvas		{
+		background-color: red;
+	}
+
+#dryRain {
+	background:url(gameImages/TitleLogo4.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#registerBG {
+	background:url(gameImages/RegisterScreen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#loggedInBG {
+	background:url(gameImages/LoggedIn.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#logOutBG {
+	background:url(gameImages/LogOutScreen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#P1BG {
+	background:url(gameImages/P1Screen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#P2BG {
+	background:url(gameImages/P2Screen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#configScreenBG {
+	background:url(gameImages/configScreen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#VSBG {
+	background:url(gameImages/VSscreen.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+#EZBG {
+	background:url(gameImages/easyBG.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#chaosBG {
+	background:url(gameImages/unchained.png) no-repeat fixed;
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.ezCanvasBG{
+	background:url(gameImages/Sky.png);
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.normalCanvasBG{
+	background:url(gameImages/space.png);
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.chaosCanvasBG{
+	background:url(gameImages/Chaos.png);
+	-webkit-background-size:cover;
+	-mos-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+span	{
+		color:white;
+		font-size: 10pt;
+		} 
+		
+#white	{
+		color:white;
+		font-size: 20pt;
+		} 
+#whiteSm	{
+		color:white;
+		font-size: 12pt;
+		} 
+		
+#logInOut		{
+				color:white;
+				font-size: 20pt;
+				background-color: black;
+				position: absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+				} 
+
+#logInScreen	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);	
+		}
+
+#shotCanvas	{
+		position: absolute;
+		left: 50px;
+		top: 75px;
+		}
+
+#charCanvas	{
+		position: absolute;
+		left: 500px;
+		top: 75px;
+		}
+
+#testCanvas	{
+		position: absolute;
+		left: 50px;
+		top: 75px;
+		}
+
+#center		{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		}
+
+#buttons	{
+/*
+//TODO Fix this section so that the text appears at the bottom of a second Div that is inside of buttons.
+//TODO Update the font and upload it to the server. See email.
+//TODO Try to put the buttons into PHP so that they appear based on what screen the user is on...?
+//Or perhaps a js function?
+//UPDATE SPLITSCREEN to add the toolbar. No match exp to be gained.
+*/
+		display: block;
+		background-color: red;
+		text-align: center;
+		
+		position: fixed;
+		top: -220px;
+		height: 250px;
+		right: 0px;
+		font-size: 25pt;
+/*Add commas after the first font if you want to have backups in case the first isn't found.*/
+		font-family: "AR DESTINE";
+		/*Sets how this thing will move if called to move.*/
+		transition        :all .8s ease-in-out;
+       	 	-moz-transition   :all .8s ease-in-out;
+        	-webkit-transition:all .8s ease-in-out;
+        	-o-transition     :all .8s ease-in-out;
+        	-ms-transition    :all .8s ease-in-out;
+		}
+		
+#buttonBox{
+			color:white;
+			position: relative;
+			bottom: 0%;
+		  }
+		
+#buttons:hover	{
+		top: 0px;
+		}
+
+.sidebar{
+		font-size: 24pt;
+		font-family: 'ARDESTINE_CUST';
+		}
+
+.arrow	{
+		font-size: 12pt;
+		font-family: 'ARDESTINE_CUST';
+		}
+
+#shotSelectRight	{
+			position: absolute;
+			top: 420px;
+			left: 327px;
+			}
+
+
+#shotSelectLeft		{
+			position: absolute;
+			top:420px;
+			left:50px;
+			}
+
+#charOptionsRight	{
+			position: absolute;
+			top:125px;
+			left:925px;
+			}
+
+#charOptionsLeft	{
+			position: absolute;
+			top:125px;
+			left:450px;
+			}
+
+#moveSlider		{
+			position: absolute;
+			top:125px;
+			left:600px;
+			}
+
+#moveRange		{
+			position: absolute;
+			top:125px;
+			left:750px;
+			}
+
+#saveSpeed		{
+			position: absolute;
+			top:125px;
+			left:850px;
+			}
+
+#showHitbox		{
+			position: absolute;
+			top:160px;
+			left:850px;
+			}
+
+#hitboxToggle		{
+					position: absolute;
+					top:160px;
+					left:730px;
+					}
+
+#backgroundOnOff
+					{
+					position: absolute;
+					top:195px;
+					left:680px;
+					}
+
+#BGMtextbox			{
+					position: absolute;
+					top:230px;
+					left:680px;
+					}
+					
+#toggleBackground	{
+					position: absolute;
+					top:195px;
+					left:850px;
+					}
+					
+#toggleBGM			{
+					position: absolute;
+					top:230px;
+					left:850px;
+					}
+
+#toggleName			{
+					position: absolute;
+					top:265px;
+					left:850px;
+					}
+
+#nameTextbox		{
+					position: absolute;
+					top:265px;
+					left:680px;
+					}
+
+#levelDisplay		{
+					position: absolute;
+					color: white;
+					background-color: black;
+					top:585px;
+					left:500px;
+					font-family: 'ARDESTINE_CUST';
+					font-size: 25pt;
+					}
+					
+#shotTypeBoxes		{
+					position: absolute;
+					top:420px;
+					left:82px;
+					}
+					
+#shotType1			{
+					font-family: 'ARDESTINE_CUST';
+					font-size: 12pt;
+					text-align: center;
+					}
+					
+#shotType2			{
+					font-family: 'ARDESTINE_CUST';
+					font-size: 12pt;
+					text-align: center;
+					}
+					
+#shotType3			{
+					font-family: 'ARDESTINE_CUST';
+					font-size: 12pt;
+					text-align: center;
+					}
+
+#chatBox			{
+					font-size: 16pt;
+					position: absolute;
+					bottom: 50px;
+					height: 100px;
+					width: 400px;
+					resize: none;
+					}
+
+#sendMessageButton	{
+					font-size: 16pt;
+					position: absolute;
+					bottom: 10px;
+					}
+					
+#chatLog			{
+					font-size: 16px;
+					position: absolute;
+					bottom: 170px;
+					height: 400px;
+					width: 500px;
+					resize: none;
+					}
+
+#hint				{
+					color:white;
+					background-color:black;
+					position: absolute;
+					top: 510px;
+					left: 20px;
+					font-size: 14pt;
+					}
+					
+#optionsButtonsDiv	{
+					position: absolute;
+					top: 100px;
+					left: 600px;
+					font-size: 12pt;
+					color: black;
+					}
+					
+#option:hover		{
+					color: white;
+					background-color: black;
+					}
+					
+#loginWarnings		{
+					color: white;
+					background-color: black;
+					}
+
+#goBack				{
+					position: absolute;
+					right: 0px;
+					background-color: red;
+					color: white;
+					}
+
+#warning			{
+					font-size: 60pt;
+					background-color: yellow;
+					color: black;
+					}
+	
+#notification		{
+					font-size: 30pt;
+					background-color: red;
+					color: white;
+					}
+#loginButtons		{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					/*This literally centers objects because it moves them
+					50% up and to the left by the element's height and width*/
+					transform: translate(-50%, -50%);
+					}
+#login				{
+					font-size: 20pt;
+					}
+#register			{
+					font-size: 20pt;
+					}
+#commit				{
+					position: absolute;
+					bottom: 5%;
+					left: 5%;
+					color: white;
+					background-color: black;
+					font-size: 30pt;
+					}
+#chaosMode			{
+					-webkit-animation: party 1s infinite;
+					-moz-animation: party 1s infinite;
+					-o-animation: party 1s infinite;
+					-ms-animation: party 1s infinite;
+					animation: party 1s infinite;
+					position: absolute;
+					bottom: 5%;
+					left: 40px;
+					background-color: black;
+					}
+					
+#ezMode			{
+					position: absolute;
+					bottom: 5%;
+					left: 300px;
+					color: white;
+					background-color: black;
+				}
+#normalMode		{
+					position: absolute;
+					bottom: 5%;
+					left: 40px;
+					color: white;
+					background-color: black;
+				}	
+				
+/*Exclusively for positioning the easy mode normal button*/
+#normalMode2		{
+					position: absolute;
+					bottom: 5%;
+					left: 300px;
+					color: white;
+					background-color: black;
+					}	
+					
+#unchainCount		{
+					position: absolute;
+					bottom: 5%;
+					left: 700px;
+					color: white;
+					background-color: black;
+					}
+					
+@-webkit-keyframes party{
+	0% {color:red;}
+	50%{color:blue;}
+	100%{color:yellow;}
+}
+
+@-moz-keyframes party {
+	0% {color:red;}
+	50%{color:blue;}
+	100%{color:yellow;}
+}
+
+@-ms-keyframes party {
+	0% {color:red;}
+	50%{color:blue;}
+	100%{color:yellow;}
+}
+
+@-o-keyframes party {
+	0% {color:red;}
+	50%{color:blue;}
+	100%{color:yellow;}
+}
+
+@keyframes party {
+	0% {color:red;}
+	50%{color:blue;}
+	100%{color:yellow;}
+}
+
+
+#partytime {
+	-webkit-animation: party 1s infinite;
+	-moz-animation: party 1s infinite;
+	-o-animation: party 1s infinite;
+	-ms-animation: party 1s infinite;
+	animation: party 1s infinite;
+	
+	font-size: 60px;
+	font-style: italic;
+   }
+
